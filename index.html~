@@ -108,15 +108,15 @@
 		var sentences = new Array(
 		'"Technological progress has merely provided us with more efficient means for going backwards." <br>--Aldous Huxley',
 		'"Photography allows one to share with other people what you have seen and understood, writing helps express your thoughts, art is about showing your feelings." <br>--Mikhail Evstafiev',
-		'"I\'m still an atheist, thank God." <br>--Luis Buñuel',
-		'"I think, therefore I am." <br>--René Descartes',
+		'"I\'m still an atheist, thank God." <br>--Luis Bunuel',
+		'"I think, therefore I am." <br>--Rene Descartes',
 		'"I don\'t necessarily agree with everything I say." <br>--Marshall McLuhan',
 		'"Art is the lie that makes us realize the truth." <br>--Pablo Picasso',
-		'“The arts are the science of enjoying life.” <br>--John Maeda',
+		'"The arts are the science of enjoying life." <br>--John Maeda',
 		'"It\'s marvellous, marvellous! Nothing will ever be as much fun. I\'m going to photograph everything, everything!" <br>--Jacques-Henri Lartigue',
 		'"To me, photography is an art of observation. It\'s about finding something interesting in an ordinary place... I\'ve found it has little to do with the things you see and everything to do with the way you see them." <br>--Elliott Erwitt',
-		'“La tipografia e\' la configurazione di uno spazio, il risultato di funzione e materia. Definire la funzione e scegliere la materia, per ordinare lo spazio, sono i compiti del tipografo. Attraverso di esso vengono determinate la forma e l\’espressione di uno stampato. La tipografia puo\' essere usata in modi molto diversi. La soluzione semplice pero\' rispecchia probabilmente la sua piu\' intima essenza; proprio per questo e\' in generale, anche la piu\' bella. Le eccezioni confermano anche qui la regola.” <br>--Max Bill',
-		'“Memory does not make films, it makes photographs.” <br>--Milan Kundera'
+		'"La tipografia e\' la configurazione di uno spazio, il risultato di funzione e materia. Definire la funzione e scegliere la materia, per ordinare lo spazio, sono i compiti del tipografo. Attraverso di esso vengono determinate la forma e l'espressione di uno stampato. La tipografia puo\' essere usata in modi molto diversi. La soluzione semplice pero\' rispecchia probabilmente la sua piu\' intima essenza; proprio per questo e\' in generale, anche la piu\' bella. Le eccezioni confermano anche qui la regola." <br>--Max Bill',
+		'"Memory does not make films, it makes photographs." <br>--Milan Kundera'
 		);
 		</script>
 		
