@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+    <head>
+<script type="text/javascript"
+    src="http://code.jquery.com/jquery-latest.js"></script>
+
+
+<script type="text/javascript">
+
+    var count =0;
+	function tumblr_image(json) {
+		var totalposts = json['posts-total'];
+	    var result = json.posts[0];
+	    var posturl = result["url"];
+		var tumblelog = json.tumblelog;
+
+
+	    $('body').append("<h2>" + totalposts + "</h2><pre>" + JSON.stringify(result, null, 2) + "</pre>");
+		count++;
+	}
+
+	function load_posts() {
+
+		var poststotal = 0;
+
+		$.ajax({
+			type: "GET",
+	  		data: {
+	  				type: "photo",
+				     num: 1,
+	  			},
+		    url: "http://nikkor.tumblr.com/api/read/json",
+		    dataType: 'jsonp',
+		    success: function(results) {
+		        poststotal = results['posts-total'];
+				
+				for (i=0;i<poststotal;i++) 
+				{      
+					    $.ajax({
+						type: "GET",
+				  		url: "http://nikkor.tumblr.com/api/read/json",
+				  		data: {
+				  				type: "photo",
+							     num: 1,
+							     start:  Math.floor(Math.random() * poststotal)
+				  			},
+				  		success: function(json) {
+							    var result = json.posts[0];
+							    var posturl = result["url-with-slug"];
+								var tumblelog = json.tumblelog;
+
+								var totalposts = json['posts-total'];
+
+							    $('body').append("<h2>" + posturl + "</h2><pre>" + JSON.stringify(result, null, 2) + "</pre>");
+								count++;
+							},
+				        				  		dataType: "jsonp"})
+				}
+		        
+		    }
+		});
+
+
+
+	}
+
+	$(document).ready(function() { load_posts(); });
+
+
+</script>
+</head>
+
+<body>
+<h1> Tumblr Importer </h1>
+
+</body>
+
+</html>
