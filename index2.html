@@ -135,33 +135,41 @@
 
 		            }
 		
+		
 			function load_posts() {
 				
-				var totalPosts = null;
+				var poststotal = 0;
 
 				$.ajax({
+					type: "GET",
+			  		data: {
+			  				type: "photo",
+						     num: 1,
+			  			},
 				    url: "http://nikkor.tumblr.com/api/read/json",
 				    dataType: 'jsonp',
-				    success: function(results){
-				        totalPosts = results['posts-total'];
-				        alert(totalPosts);
+				    success: function(results) {
+				        poststotal = results['posts-total'];
+				
+				        $('body').append("<h2>" + poststotal + "</h2><pre>" + JSON.stringify(results, null, 2) + "</pre>")
+				
+						for (i=0;i<48;i++) 
+						{      
+							    $.ajax({
+								type: "GET",
+						  		url: "http://nikkor.tumblr.com/api/read/json",
+						  		data: {
+						  				type: "photo",
+									     num: 1,
+									     start:  Math.floor(Math.random() * poststotal)
+						  			},
+						  		success: tumblr_image,
+						  		dataType: "jsonp"})
+						}
+				        
 				    }
 				});
-				
-				for (i=0;i<48;i++) 
-				{
-					    $.ajax({
-						type: "GET",
-				  		url: "http://nikkor.tumblr.com/api/read/json",
-				  		data: {
-				  				type: "photo",
-							     num: 1,
-							     start: Math.floor(Math.random() * totalPosts)
-				  			},
-				  		success: tumblr_image,
-				  		dataType: "jsonp"})
 
-				}
 				
 			}
 			
