@@ -12,7 +12,7 @@
 
 		body
 		{
-		    background:  #fff url(http://data.tumblr.com/069MD6LsD56yfjjoOChs2GcO_r1_400.gif) ;
+		    background:  #fff url(069MD6LsD56yfjjoOChs2GcO_r1_400.gif) ;
 			color: #ddd;
 			font-size: 9px;
 			font-family: Verdana, sans-serif;
@@ -115,15 +115,14 @@
 		'"The arts are the science of enjoying life." <br>--John Maeda',
 		'"It\'s marvellous, marvellous! Nothing will ever be as much fun. I\'m going to photograph everything, everything!" <br>--Jacques-Henri Lartigue',
 		'"To me, photography is an art of observation. It\'s about finding something interesting in an ordinary place... I\'ve found it has little to do with the things you see and everything to do with the way you see them." <br>--Elliott Erwitt',
-		'"La tipografia e\' la configurazione di uno spazio, il risultato di funzione e materia. Definire la funzione e scegliere la materia, per ordinare lo spazio, sono i compiti del tipografo. Attraverso di esso vengono determinate la forma e l'espressione di uno stampato. La tipografia puo\' essere usata in modi molto diversi. La soluzione semplice pero\' rispecchia probabilmente la sua piu\' intima essenza; proprio per questo e\' in generale, anche la piu\' bella. Le eccezioni confermano anche qui la regola." <br>--Max Bill',
 		'"Memory does not make films, it makes photographs." <br>--Milan Kundera'
 		);
 		</script>
 		
         <script type="text/javascript"
-            src="http://code.jquery.com/jquery-latest.js"></script>
+            src="//code.jquery.com/jquery-latest.js"></script>
         <script type="text/javascript"
-            src="http://nikkor.tumblr.com/api/read/json?num=1&type=photo"></script>
+            src="//nikkor.tumblr.com/api/read/json?num=1&type=photo"></script>
         <script type="text/javascript">
 
 			(function($) {
@@ -186,7 +185,7 @@
 			function load_posts() {
 				for (i=0;i<48;i++) 
 				{
-				    $.getJSONP("http://nikkor.tumblr.com/api/read/json?callback=tumblr_image&type=photo&num=1&start="
+				    $.getJSONP("//nikkor.tumblr.com/api/read/json?callback=tumblr_image&type=photo&num=1&start="
 		             + Math.floor(Math.random() * tumblr_api_read["posts-total"]),
 		             tumblr_image);
 				}
@@ -207,9 +206,9 @@
 		<div class="grid_4 alpha">
 			<div id="principal">
 				
-			 <img src="http://data.tumblr.com/069MD6LsD4wqq8zoeJ8jVA91_250.png">
-			 <img src="http://data.tumblr.com/069MD6LsD5374ln6eMCCPLLn_100.png" border=10px align="right">
-			 <h1><a href="http://nikkor.tumblr.com/">Nikkor-H 50mm f2.0</a><font color="green"> <br><script type="text/javascript"> document.write( '\@ ' + getBeat() ); </script>
+			 <img src="069MD6LsD4wqq8zoeJ8jVA91_250.png">
+			 <img src="069MD6LsD5374ln6eMCCPLLn_100.png" border=10px align="right">
+			 <h1><a href="://nikkor.tumblr.com/">Nikkor-H 50mm f2.0</a><font color="green"> <br><script type="text/javascript"> document.write( '\@ ' + getBeat() ); </script>
             </font></h1>
 
 			 <script type="text/javascript"> document.write(sentences[Math.floor(Math.random()*sentences.length)]);
